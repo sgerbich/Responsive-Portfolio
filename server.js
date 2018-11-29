@@ -6,7 +6,7 @@ var PORT = 3000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
+app.use(express.static(__dirname + '/public/'));
 require("./routes/htmlRoutes")(app);
 
 app.listen(PORT, function() {
