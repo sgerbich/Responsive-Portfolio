@@ -6,7 +6,8 @@ var PORT = process.env.PORT || 3000;;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '/public/assets/html/'));
+app.use(express.static(__dirname + '/public/assets/'));
+// app.use(express.static(path.join(_dirname, "public")));
 require("./routes/htmlRoutes")(app);
 
 app.listen(PORT, function() {
